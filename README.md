@@ -11,13 +11,13 @@
 -  Max 100 Caracteres
 ### Senha
 -  Min 8 Caracteres
--  Min 60 Caracteres
+-  Max 60 Caracteres
 -  Obrigatorio Caracter especial
 -  Obrigatorio uma letra Maiúscula
 -  Campo obrigatorio
 ### Confirmar Senha
 -  Min 8 Caracteres
--  Min 60 Caracteres
+-  Max 60 Caracteres
 -  Tem que ser igual a senha
 -  campo obrigatorio
 ### Cidade

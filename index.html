@@ -13,41 +13,46 @@
     </header>
 
     <div class="d-flex justify-content-center align-items-center mt-5">
-        <form action="" method="POST" class="needs-validation bg-white p-4 rounded shadow" novalidate style="width: 100%; max-width: 500px;">
+        <form id="cadastroForm" action="" method="POST" class="needs-validation bg-white p-4 rounded shadow" novalidate style="width: 100%; max-width: 500px;">
+            <!-- Campo Nome -->
             <div class="mb-3">
                 <label for="nome">Nome:</label>
                 <div class="input-group">
                     <span class="input-group-addon">
                         <i class="bi bi-person"></i>
                     </span>
-                    <input type="text" id="nome" name="nome" class="form-control" required placeholder="exemple">
+                    <input type="text" id="nome" name="nome" class="form-control" minlength="5" maxlength="60" required placeholder="Nome completo">
                 </div>
                 <div class="invalid-feedback">
-                    Por favor, insira seu nome.
+                    O nome deve ter entre 5 e 60 caracteres.
                 </div>
             </div>
+
+            <!-- Campo E-mail -->
             <div class="mb-3">
                 <label for="email">E-mail:</label>
                 <div class="input-group">
                     <span class="input-group-addon">
                         <i class="bi bi-envelope"></i>
                     </span>
-                    <input type="email" id="email" name="email" class="form-control" required placeholder="exemple@gmail.com">
+                    <input type="email" id="email" name="email" class="form-control" minlength="5" maxlength="100" required placeholder="exemplo@gmail.com">
                 </div>
                 <div class="invalid-feedback">
-                    Por favor, insira um e-mail válido.
+                    Insira um e-mail válido com pelo menos 5 caracteres.
                 </div>
             </div>
+
+            <!-- Campo Senha -->
             <div class="mb-3">
                 <label for="senha">Senha:</label>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        <i class="bi bi-lock"></i> <!-- Ícone de cadeado -->
+                        <i class="bi bi-lock"></i>
                     </span>
-                    <input type="password" id="senha" name="senha" class="form-control" required placeholder="password">
+                    <input type="password" id="senha" name="senha" class="form-control" minlength="8" maxlength="60" required placeholder="Senha">
                 </div>
                 <div class="invalid-feedback">
-                    Por favor, insira uma senha.
+                    A senha deve ter entre 8 e 60 caracteres, incluindo pelo menos uma letra maiúscula e um caractere especial.
                 </div>
             </div>
 
@@ -56,9 +61,9 @@
                 <label for="confirmar_senha">Confirmar Senha:</label>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        <i class="bi bi-lock-fill"></i> <!-- Ícone de cadeado preenchido -->
+                        <i class="bi bi-lock-fill"></i>
                     </span>
-                    <input type="password" id="confirmar_senha" name="confirmar_senha" class="form-control" required placeholder="password">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" class="form-control" minlength="8" maxlength="60" required placeholder="Confirme sua senha">
                 </div>
                 <div class="invalid-feedback">
                     As senhas não coincidem.
@@ -70,12 +75,12 @@
                 <label for="cidade">Cidade:</label>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        <i class="bi bi-house"></i> <!-- Ícone de casa -->
+                        <i class="bi bi-house"></i>
                     </span>
-                    <input type="text" id="cidade" name="cidade" class="form-control" required placeholder="city">
+                    <input type="text" id="cidade" name="cidade" class="form-control" minlength="2" maxlength="30" required placeholder="Sua cidade">
                 </div>
                 <div class="invalid-feedback">
-                    Por favor, insira sua cidade.
+                    Insira uma cidade válida com pelo menos 2 caracteres.
                 </div>
             </div>
 
@@ -84,19 +89,21 @@
                 <label for="estado">Estado:</label>
                 <div class="input-group">
                     <span class="input-group-addon">
-                        <i class="bi bi-geo-alt"></i> <!-- Ícone de localização -->
+                        <i class="bi bi-geo-alt"></i>
                     </span>
                     <select id="estado" name="estado" class="form-control" required>
                         <option value="">Selecione...</option>
-                        <!-- Adicione os estados aqui -->
+                        <!-- Estados serão preenchidos via JavaScript -->
                     </select>
                 </div>
                 <div class="invalid-feedback">
-                    Por favor, selecione um estado.
+                    Selecione um estado válido.
                 </div>
             </div>
+
             <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
         </form>
     </div>
+
 </body>
 </html>
